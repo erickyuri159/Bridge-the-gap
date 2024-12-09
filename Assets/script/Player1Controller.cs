@@ -5,10 +5,9 @@ public class Player1Controller : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public bool canMoveBoxes = false;
+    public bool canMove = true; // Nova propriedade para controlar o movimento
     private Rigidbody2D rb;
     private bool isGrounded = false;
-    
-    
 
     void Start()
     {
@@ -17,15 +16,20 @@ public class Player1Controller : MonoBehaviour
 
     void Update()
     {
-        float moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (canMove)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
+            float moveInput = Input.GetAxis("Horizontal");
+            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-       
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y); // Para o movimento
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -43,6 +47,5 @@ public class Player1Controller : MonoBehaviour
             isGrounded = false;
         }
     }
-
-  
 }
+
