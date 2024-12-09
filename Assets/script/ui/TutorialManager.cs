@@ -17,7 +17,7 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         tutorialPanel.SetActive(false);
-        skipButton.gameObject.SetActive(false); // Esconde o botão "Pular" inicialmente
+        skipButton.gameObject.SetActive(hasReadTutorial); // Mostra o botão "Pular" se o tutorial já foi lido
         skipButton.onClick.AddListener(SkipTutorial);
         tutorialMessages = new Queue<string>();
     }
@@ -33,6 +33,7 @@ public class TutorialManager : MonoBehaviour
             "E seu amigo cego ele ajudara abrir caminho pelas ruas. Boa sorte e divirta-se!"
         };
         StartTutorial(initialMessages);
+        hasReadTutorial = true; // Marca que o tutorial foi lido após a primeira exibição
     }
 
     public void StartTutorial(List<string> messages)
