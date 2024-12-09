@@ -6,6 +6,7 @@ public class Lever : MonoBehaviour
     public GameObject bridge; // Referência para a ponte
     private bool playerInRange = false;
     private Animator animator;
+    public Door door; // Referência à porta que será ativada
 
     void Start()
     {
@@ -47,6 +48,13 @@ public class Lever : MonoBehaviour
             isActivated = true;
             animator.SetTrigger("Pull"); // Ativa a animação de puxar a alavanca
             bridge.GetComponent<Bridge>().LowerBridge(); // Chama o método para abaixar a ponte
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player1"))
+        {
+            door.ActivateDoor(); // Ativa a porta quando o jogador puxa a alavanca
         }
     }
 }
