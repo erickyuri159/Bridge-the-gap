@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bridge: {fileID: 0}
+  door: {fileID: 0}
 --- !u!95 &3439937542129116444
 Animator:
   serializedVersion: 5
@@ -360,9 +361,9 @@ ParticleSystem:
   autoRandomSeed: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 3
-    scalar: 0.6
-    minScalar: 0.3
+    minMaxState: 0
+    scalar: 0
+    minScalar: 0
     maxCurve:
       serializedVersion: 2
       m_Curve:
@@ -968,7 +969,7 @@ ParticleSystem:
         m_RotationOrder: 4
   ShapeModule:
     serializedVersion: 6
-    enabled: 1
+    enabled: 0
     type: 12
     angle: 0.27
     length: 5
@@ -1800,7 +1801,7 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -2.06
+      scalar: -0.07
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1853,7 +1854,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -4.03
+      scalar: -1.55
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1959,7 +1960,7 @@ ParticleSystem:
     orbitalX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.54
+      scalar: 4.4
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2012,7 +2013,7 @@ ParticleSystem:
     orbitalY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.06
+      scalar: -2.15
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2118,7 +2119,7 @@ ParticleSystem:
     orbitalOffsetX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -4.75
+      scalar: 2.81
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2171,7 +2172,7 @@ ParticleSystem:
     orbitalOffsetY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.08
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2277,7 +2278,7 @@ ParticleSystem:
     radial:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.76
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2330,7 +2331,7 @@ ParticleSystem:
     speedModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.38
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5082,7 +5083,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

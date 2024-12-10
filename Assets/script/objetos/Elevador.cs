@@ -7,7 +7,6 @@ public class Elevator : MonoBehaviour
     public Transform topPosition; // Posição do topo do elevador
     public Transform bottomPosition; // Posição do fundo do elevador
     public float speed = 2f; // Velocidade de movimento do elevador
-    public GameObject blockingWall; // Parede que bloqueia o Player2
 
     private bool movingUp = false;
     private bool activated = false;
@@ -30,10 +29,6 @@ public class Elevator : MonoBehaviour
         {
             activated = true; // Ativa o elevador se estiver desativado
             movingUp = !movingUp; // Alterna a direção do movimento
-            if (movingUp)
-            {
-                blockingWall.SetActive(true); // Ativa a parede ao mover para cima
-            }
         }
     }
 
@@ -53,7 +48,6 @@ public class Elevator : MonoBehaviour
             if (transform.position == bottomPosition.position)
             {
                 activated = false; // Para o elevador ao chegar no fundo
-                blockingWall.SetActive(false); // Desativa a parede ao chegar no fundo
             }
         }
     }
@@ -62,7 +56,7 @@ public class Elevator : MonoBehaviour
     {
         if (other.CompareTag("Player2"))
         {
-            blockingWall.SetActive(true); // Ativa a parede quando o Player2 entra no elevador
+            // Ação quando o Player2 entra no elevador (se necessário)
         }
     }
 }
