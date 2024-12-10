@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 public class Bridge : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public HingeJoint2D hingeJoint;
+    private HingeJoint2D hingeJoint;
     public float dropSpeed = 5.0f; // Velocidade com que a ponte cai
     public Vector2 finalPosition; // Posição final da ponte
 

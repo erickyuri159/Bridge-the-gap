@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class Buttons : MonoBehaviour
 {
     public Button startButton; // Botão "Iniciar"
+    
     public TutorialManager tutorialManager; // Referência ao TutorialManager
 
     void Start()
     {
         startButton.onClick.AddListener(OnStartButtonClicked);
+       
         FreezeGame(); // Congela o jogo no início
     }
 
@@ -19,6 +21,8 @@ public class Buttons : MonoBehaviour
         tutorialManager.ShowTutorial();
         UnfreezeGame(); // Descongela o jogo quando o botão "Iniciar" é clicado
     }
+
+    
 
     void FreezeGame()
     {
@@ -40,5 +44,9 @@ public class Buttons : MonoBehaviour
     {
         pauseMenu.isPaused = false;
         UnfreezeGame(); // Descongela o jogo quando retomado
+    }
+    public void SairJogo()
+    {
+        Application.Quit();
     }
 }
