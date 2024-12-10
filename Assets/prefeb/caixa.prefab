@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialMessages:
-  - "Surgir\xE1 alguns objetos para cara um"
+  - "Surgir\xE1 alguns objetos para cada um dos personagens"
   - "nesse caso para empurrar essa caixa s\xF3 seu amigo cadeirante que vai conseguir"
   - "logo a frente ter\xE1 um local aonde voce jogara a caixa"
   - a caixa vai te ajudar a passar pra outro lado
