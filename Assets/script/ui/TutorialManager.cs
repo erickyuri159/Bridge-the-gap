@@ -25,13 +25,13 @@ public class TutorialManager : MonoBehaviour
     public void ShowTutorial()
     {
         List<string> initialMessages = new List<string>
-        {
-            "Bem-vindo ao jogo! você terá controle com os dois personagens",
-            "Use as setas para mover seu personagem, com a letra L mudara o personagem.",
-            "Pressione a barra de espaço para pular com o personagem cego. O cadeirante não tem pulo",
-            "cada personagem tem suas vantagens, o cadeirante te ajudara a empurar coisas pessadas",
-            "E seu amigo cego ele ajudara abrir caminho pelas ruas. Boa sorte e divirta-se!"
-        };
+    {
+        "Bem-vindo ao jogo! você terá controle com os dois personagens",
+        "Use as setas para mover seu personagem, com a letra L mudara o personagem.",
+        "Pressione a barra de espaço para pular com o personagem cego. O cadeirante não tem pulo",
+        "cada personagem tem suas vantagens, o cadeirante te ajudara a empurar coisas pessadas",
+        "E seu amigo cego ele ajudara abrir caminho pelas ruas. Boa sorte e divirta-se!"
+    };
         StartTutorial(initialMessages);
         hasReadTutorial = true; // Marca que o tutorial foi lido após a primeira exibição
     }
@@ -51,6 +51,7 @@ public class TutorialManager : MonoBehaviour
         if (hasReadTutorial)
         {
             skipButton.gameObject.SetActive(true); // Mostra o botão "Pular" se o tutorial já foi lido
+            skipButton.transform.SetAsLastSibling(); // Move o botão "Pular" para o final do painel
         }
     }
 
